@@ -5,7 +5,7 @@
 **Submission target:** individual Git repository, branch or folder `gustafson-law-practice/`  
 **Status:** all 25 tasks answered; executable simulation, OpenMP benchmarking, real measured data, regression analysis, validation tests, and publication-resolution plots included.
 
-> **Attribution:** The assignment prompt is included in `references/Gustafson_Law_Practice_Tasks.pdf`. This directory contains an independent worked solution. The repository has a **local Git history** but has **not** been pushed to the student's personal Git hosting account. Review and personalize attribution before submitting.
+> **Attribution:** The assignment prompt is included in `references/Gustafson_Law_Practice_Tasks.pdf`. This directory contains an independent worked solution. Review and personalize attribution before submitting.
 
 ## Table of contents
 
