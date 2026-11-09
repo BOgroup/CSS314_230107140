@@ -1,0 +1,29 @@
+{
+  "model": "S(P)=P-alpha*(P-1)",
+  "regression": "unweighted OLS through origin of (P-S) on (P-1), on all individual trials P>1",
+  "num_measurements": 25,
+  "thread_counts": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "runs_per_thread_count": {
+    "1": 5,
+    "2": 5,
+    "3": 5,
+    "4": 5,
+    "5": 5
+  },
+  "alpha_raw_unconstrained": 0.7303855507666667,
+  "alpha_physical_bounded": 0.7303855507666667,
+  "alpha_bootstrap_95pct_raw": [
+    0.6389805367996666,
+    0.8358907745266665
+  ],
+  "rmse_speedup_unconstrained": 0.6050123553619453,
+  "r_squared_unconstrained": -0.00715357325394983,
+  "rmse_speedup_constrained": 0.6050123553619453,
+  "warning": "Shared-fraction Amdahl comparison is illustrative: Amdahl s and Gustafson alpha have different reference frames. Fit estimates an effective phenomenological fraction, not an invariant application property."
+}

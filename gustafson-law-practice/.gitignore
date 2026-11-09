@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+benchmarks/weak_scale_bench/bench
+*.log
+.DS_Store
