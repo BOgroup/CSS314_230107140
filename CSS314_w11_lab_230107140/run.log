@@ -1,0 +1,66 @@
+LAB student_id=230107140 profile=pilot date_utc=2026-11-13T04:49:54.566441+00:00
+LAB execution_platform=Linux-6.18.57-x86_64-with-glibc2.41 cpu=INTEL(R) XEON(R) PLATINUM 8573C visible_cpus=5
+--- PHASE0: clock calibration ---
+PHASE0 cpu=INTEL(R) XEON(R) PLATINUM 8573C
+PHASE0 physical=5
+PHASE0 logical=5
+PHASE0 line=64
+PHASE0 l1d=48K
+PHASE0 l2=2048K
+PHASE0 l3=266240K
+PHASE0 threads_core=1
+PHASE0 python_os=3.13.5 / Linux 6.18.57
+PHASE0 affinity=5
+PHASE0 clock_reads=2000000 total_ns=126104714 average_latency_ns=63.0524
+VERIFY_HASH[PHASE0]: A95B96102FE18FE0 (P_log=5)
+--- PHASE1: false sharing ---
+PHASE1 stride=1 p=5 M=1200000 min_ms=164.7223 median_ms=167.2935 iqr_ms=45.6067 max_ms=210.3291 throughput_Mops=7.1730
+PHASE1 stride=2 p=5 M=1200000 min_ms=127.0841 median_ms=131.0876 iqr_ms=71.9229 max_ms=199.0070 throughput_Mops=9.1542
+PHASE1 stride=4 p=5 M=1200000 min_ms=107.3720 median_ms=112.8272 iqr_ms=105.1065 max_ms=212.4785 throughput_Mops=10.6357
+PHASE1 stride=8 p=5 M=1200000 min_ms=93.9887 median_ms=97.4288 iqr_ms=11.7037 max_ms=105.6924 throughput_Mops=12.3167
+PHASE1 stride=16 p=5 M=1200000 min_ms=96.8809 median_ms=107.9068 iqr_ms=23.0237 max_ms=119.9046 throughput_Mops=11.1207
+PHASE1 stride=32 p=5 M=1200000 min_ms=105.9510 median_ms=106.9065 iqr_ms=23.2331 max_ms=129.1840 throughput_Mops=11.2248
+PHASE1 scale stride=1 p=1 T_ms=265.5942 S=1.00000 E=1.00000 e=n/a
+PHASE1 scale stride=1 p=2 T_ms=195.4188 S=1.35910 E=0.67955 e=0.4715592226615912
+PHASE1 scale stride=1 p=4 T_ms=147.6101 S=1.79930 E=0.44982 e=0.4076974599994611
+PHASE1 scale stride=1 p=5 T_ms=167.2935 S=1.58759 E=0.31752 e=0.5373549476704567
+PHASE1 scale stride=16 p=1 T_ms=261.8161 S=1.00000 E=1.00000 e=n/a
+PHASE1 scale stride=16 p=2 T_ms=118.6467 S=2.20669 E=1.10334 e=-0.09366384110651793
+PHASE1 scale stride=16 p=4 T_ms=118.7201 S=2.20532 E=0.55133 e=0.27126462795310685
+PHASE1 scale stride=16 p=5 T_ms=107.9068 S=2.42632 E=0.48526 e=0.2651842323448687
+VERIFY_HASH[PHASE1]: A4FE5625B121E786 (P_log=5)
+--- PHASE2: strong/weak scaling ---
+PHASE2 p=1 strong_N=30000 T_ms=51.8326 serial_ms=0.7507 total_checksum=17275.602476520 weak_N=10000 T_ms=17.4250 serial_ms=0.2096 weak_checksum=4878.954159995
+PHASE2 p=2 strong_N=30000 T_ms=28.9370 serial_ms=0.6885 total_checksum=17275.602476520 weak_N=20000 T_ms=20.8121 serial_ms=0.4630 weak_checksum=10680.176740466
+PHASE2 p=3 strong_N=30000 T_ms=20.9630 serial_ms=0.6781 total_checksum=17275.602476520 weak_N=30000 T_ms=21.6386 serial_ms=0.6673 weak_checksum=17275.602476520
+PHASE2 p=4 strong_N=30000 T_ms=24.5260 serial_ms=0.6576 total_checksum=17275.602476520 weak_N=40000 T_ms=34.8529 serial_ms=0.8637 weak_checksum=24617.749384025
+PHASE2 p=5 strong_N=30000 T_ms=33.7614 serial_ms=0.7356 total_checksum=17275.602476520 weak_N=50000 T_ms=44.9149 serial_ms=1.0904 weak_checksum=31814.192453420
+VERIFY_HASH[PHASE2]: 4866BF3EEC44A59E (P_log=5)
+--- PHASE3: roofline & GEMM ---
+PHASE3 bw_bytes_per_buffer=96000000 p=5 median_ms=19.1973 iqr_ms=6.5619 nominal_bw_GBps=10.001432
+PHASE3 fp_iters_worker=250000 flops_total=40000000 median_worker_ms=98.5196 iqr_ms=21.4581 checksum=85.998500189614 compute_GFLOPs=0.406010 ridge_FLOPs_per_byte=0.040595
+PHASE3 gemm_variant=naive BS=None N=96 p=5 median_ms=30.0698 iqr_ms=21.6110 GFLOPs=0.05884557 max_abs_err_vs_v2=n/a
+PHASE3 gemm_variant=reordered BS=None N=96 p=5 median_ms=36.9368 iqr_ms=8.4611 GFLOPs=0.04790538 max_abs_err_vs_v2=n/a
+PHASE3 gemm_variant=blocked BS=4 N=96 p=5 median_ms=50.7451 iqr_ms=10.0336 GFLOPs=0.03486978 max_abs_err_vs_v2=0.0
+PHASE3 gemm_variant=blocked BS=8 N=96 p=5 median_ms=46.4216 iqr_ms=5.2251 GFLOPs=0.03811743 max_abs_err_vs_v2=0.0
+PHASE3 gemm_variant=blocked BS=12 N=96 p=5 median_ms=43.1691 iqr_ms=4.0216 GFLOPs=0.04098932 max_abs_err_vs_v2=0.0
+PHASE3 gemm_variant=blocked BS=16 N=96 p=5 median_ms=41.4036 iqr_ms=9.0004 GFLOPs=0.04273711 max_abs_err_vs_v2=0.0
+PHASE3 gemm_variant=blocked BS=24 N=96 p=5 median_ms=38.6473 iqr_ms=10.2881 GFLOPs=0.04578512 max_abs_err_vs_v2=0.0
+PHASE3 gemm_variant=blocked BS=32 N=96 p=5 median_ms=37.7151 iqr_ms=1.9187 GFLOPs=0.04691683 max_abs_err_vs_v2=0.0
+PHASE3 gemm_variant=blocked BS=48 N=96 p=5 median_ms=37.2757 iqr_ms=7.0078 GFLOPs=0.04746987 max_abs_err_vs_v2=0.0
+PHASE3 gemm_variant=blocked BS=64 N=96 p=5 median_ms=37.7808 iqr_ms=5.5258 GFLOPs=0.04683523 max_abs_err_vs_v2=0.0
+PHASE3 gemm_variant=blocked BS=96 N=96 p=5 median_ms=38.6962 iqr_ms=10.8313 GFLOPs=0.04572734 max_abs_err_vs_v2=0.0
+PHASE3 gemm_variant=blocked BS=128 N=96 p=5 median_ms=37.8574 iqr_ms=9.8267 GFLOPs=0.04674048 max_abs_err_vs_v2=0.0
+VERIFY_HASH[PHASE3]: C2163AF2964DDCB7 (P_log=5)
+--- PHASE4: skewed scheduling ---
+PHASE4 strategy=block C=None p=5 N=2400 wall_median_ms=96.7253 wall_iqr_ms=13.9045 lambda_median=2.4386 checksum_median_run=3066.826356338 worker_times_median_run=[1.9797, 6.3706, 30.576, 38.1435, 74.4159]
+PHASE4 strategy=cyclic C=None p=5 N=2400 wall_median_ms=66.9481 wall_iqr_ms=9.2719 lambda_median=1.1674 checksum_median_run=3066.826356338 worker_times_median_run=[50.124, 48.0343, 25.0647, 47.4883, 43.0518]
+PHASE4 strategy=dynamic C=1 p=5 N=2400 wall_median_ms=73.9967 wall_iqr_ms=36.8613 lambda_median=1.1113 checksum_median_run=3066.826356338 worker_times_median_run=[66.7207, 64.7233, 63.8041, 62.0381, 56.7002]
+PHASE4 strategy=dynamic C=4 p=5 N=2400 wall_median_ms=72.7103 wall_iqr_ms=92.6658 lambda_median=1.1210 checksum_median_run=3066.826356338 worker_times_median_run=[64.6528, 64.3409, 61.1101, 58.5032, 54.5527]
+PHASE4 strategy=dynamic C=16 p=5 N=2400 wall_median_ms=72.6832 wall_iqr_ms=22.0229 lambda_median=1.1073 checksum_median_run=3066.826356338 worker_times_median_run=[63.8548, 62.2171, 60.5886, 56.5532, 45.1172]
+PHASE4 strategy=dynamic C=64 p=5 N=2400 wall_median_ms=73.2000 wall_iqr_ms=13.5941 lambda_median=1.2559 checksum_median_run=3066.826356338 worker_times_median_run=[63.7466, 54.8089, 52.4282, 42.7369, 34.3758]
+PHASE4 strategy=dynamic C=256 p=5 N=2400 wall_median_ms=97.1085 wall_iqr_ms=95.2074 lambda_median=1.3898 checksum_median_run=3066.826356338 worker_times_median_run=[71.6157, 82.8071, 74.0466, 58.9884, 51.5023]
+PHASE4 strategy=dynamic C=1024 p=5 N=2400 wall_median_ms=98.4281 wall_iqr_ms=56.8823 lambda_median=2.7111 checksum_median_run=3066.826356338 worker_times_median_run=[17.7228, 91.0699, 50.1574, 0.0723, 0.06]
+VERIFY_HASH[PHASE4]: D96A4DFD717FEF03 (P_log=5)
+LAB elapsed_seconds=14.745
+WROTE /mnt/data/lab_report_230107140.md (50585 bytes)
