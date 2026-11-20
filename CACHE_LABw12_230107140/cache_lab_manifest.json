@@ -1,0 +1,313 @@
+{
+  "assignment": "Cache Line & False Sharing Mechanics in Multi-Core Python",
+  "student_id": "230107140",
+  "instructor": "Sufyan bin Uzayr",
+  "measured_at_utc": "2026-11-20T05:49:12.640873+00:00",
+  "git_username": "BOgroup",
+  "instance_seed": 11152264029803727661,
+  "context": {
+    "student_id": "230107140",
+    "git_username": "BOgroup",
+    "cpu_model": "Apple M3 Pro",
+    "cpu_signature": "arm64::Apple M3 Pro::12",
+    "logical_cores": 12,
+    "available_logical_cpus": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "chosen_worker_cpus": null,
+    "affinity_mode": "affinity_unavailable_on_this_OS",
+    "cache_line_size_bytes": 128,
+    "instance_seed": 11152264029803727661,
+    "machine_arch": "arm64",
+    "os": "Darwin",
+    "python_version": "3.12.0",
+    "numpy_version": "2.3.3"
+  },
+  "num_threads": 4,
+  "iterations_per_thread": 60000000,
+  "benchmark_strides": [
+    1,
+    4,
+    8,
+    16
+  ],
+  "benchmarks": {
+    "1": {
+      "layout": "contiguous",
+      "stride_elements": 1,
+      "spacing_bytes": 8,
+      "iterations_per_thread": 60000000,
+      "total_updates": 240000000,
+      "elapsed_ns": 96996667,
+      "elapsed_ms": 96.996667,
+      "ns_per_update": 0.40415277916666664,
+      "context_switches": {
+        "voluntary": 0,
+        "involuntary": 161
+      },
+      "per_thread_context_switches": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "all_threads_affinity_pinned": false,
+      "buffer_base_address_mod_64": 0,
+      "buffer_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "relative_cache_line_ids": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "distinct_cache_lines": 1,
+      "final_counter_values": [
+        60000000,
+        240000000,
+        360000000,
+        480000000
+      ],
+      "expected_counter_values": [
+        60000000,
+        240000000,
+        360000000,
+        480000000
+      ],
+      "parity_passed": true
+    },
+    "4": {
+      "layout": "half_line",
+      "stride_elements": 4,
+      "spacing_bytes": 32,
+      "iterations_per_thread": 60000000,
+      "total_updates": 240000000,
+      "elapsed_ns": 97136500,
+      "elapsed_ms": 97.1365,
+      "ns_per_update": 0.4047354166666667,
+      "context_switches": {
+        "voluntary": 0,
+        "involuntary": 174
+      },
+      "per_thread_context_switches": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "all_threads_affinity_pinned": false,
+      "buffer_base_address_mod_64": 0,
+      "buffer_indices": [
+        0,
+        4,
+        8,
+        12
+      ],
+      "relative_cache_line_ids": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "distinct_cache_lines": 1,
+      "final_counter_values": [
+        60000000,
+        240000000,
+        360000000,
+        480000000
+      ],
+      "expected_counter_values": [
+        60000000,
+        240000000,
+        360000000,
+        480000000
+      ],
+      "parity_passed": true
+    },
+    "8": {
+      "layout": "line_padded",
+      "stride_elements": 8,
+      "spacing_bytes": 64,
+      "iterations_per_thread": 60000000,
+      "total_updates": 240000000,
+      "elapsed_ns": 60135875,
+      "elapsed_ms": 60.135875,
+      "ns_per_update": 0.2505661458333333,
+      "context_switches": {
+        "voluntary": 0,
+        "involuntary": 146
+      },
+      "per_thread_context_switches": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "all_threads_affinity_pinned": false,
+      "buffer_base_address_mod_64": 0,
+      "buffer_indices": [
+        0,
+        8,
+        16,
+        24
+      ],
+      "relative_cache_line_ids": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "distinct_cache_lines": 2,
+      "final_counter_values": [
+        60000000,
+        240000000,
+        360000000,
+        480000000
+      ],
+      "expected_counter_values": [
+        60000000,
+        240000000,
+        360000000,
+        480000000
+      ],
+      "parity_passed": true
+    },
+    "16": {
+      "layout": "prefetch_safe",
+      "stride_elements": 16,
+      "spacing_bytes": 128,
+      "iterations_per_thread": 60000000,
+      "total_updates": 240000000,
+      "elapsed_ns": 56069167,
+      "elapsed_ms": 56.069167,
+      "ns_per_update": 0.23362152916666667,
+      "context_switches": {
+        "voluntary": 0,
+        "involuntary": 165
+      },
+      "per_thread_context_switches": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "all_threads_affinity_pinned": false,
+      "buffer_base_address_mod_64": 0,
+      "buffer_indices": [
+        0,
+        16,
+        32,
+        48
+      ],
+      "relative_cache_line_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "distinct_cache_lines": 4,
+      "final_counter_values": [
+        60000000,
+        240000000,
+        360000000,
+        480000000
+      ],
+      "expected_counter_values": [
+        60000000,
+        240000000,
+        360000000,
+        480000000
+      ],
+      "parity_passed": true
+    }
+  },
+  "private_baseline": {
+    "layout": "register_private",
+    "stride_elements": 8,
+    "spacing_bytes": 64,
+    "iterations_per_thread": 60000000,
+    "total_updates": 240000000,
+    "elapsed_ns": 60167,
+    "elapsed_ms": 0.060167,
+    "ns_per_update": 0.0002506958333333333,
+    "context_switches": {
+      "voluntary": 0,
+      "involuntary": 29
+    },
+    "per_thread_context_switches": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "all_threads_affinity_pinned": false,
+    "buffer_base_address_mod_64": 0,
+    "buffer_indices": [
+      0,
+      8,
+      16,
+      24
+    ],
+    "relative_cache_line_ids": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "distinct_cache_lines": 2,
+    "final_counter_values": [
+      60000000,
+      240000000,
+      360000000,
+      480000000
+    ],
+    "expected_counter_values": [
+      60000000,
+      240000000,
+      360000000,
+      480000000
+    ],
+    "parity_passed": true
+  },
+  "ratios": {
+    "stride1_over_stride8": 1.6129584378709048,
+    "stride8_over_stride16": 1.0725302018487273,
+    "stride1_over_private": 1612.1240380939719
+  },
+  "verification": {
+    "llvm": {
+      "llvm_sha256": "235624ab025b863ff55369052f3b60f3d6a02c86afd2abcb06b1258d5b883534",
+      "llvm_native_function_sha256": "4f6c60191a2ab8b49507f5bff303983c17e62c7ba289571ed225f0628dc8d88a",
+      "llvm_native_i64_load_count": 1,
+      "llvm_native_i64_store_count": 1,
+      "llvm_native_memory_barrier_count": 1,
+      "llvm_loop_contains_load_store_and_clobber": true,
+      "numba_nogil_true": true,
+      "nopython_native_function": true,
+      "audit_passed": true,
+      "llvm_excerpt": "%1 = add i64 %arg.iters, 1\n%.177 = load i64, ptr %sunkaddr1, align 8\n%.179 = add i64 %.24, %.177\nstore i64 %.179, ptr %sunkaddr1, align 8\ntail call void asm sideeffect \"\", \"~{memory}\"() #0\n%lsr.iv.next = add i64 %lsr.iv, -1"
+    },
+    "exact_state_parity_passed": true,
+    "all_buffers_64_byte_aligned": true,
+    "complete_60m_iterations_per_thread": true,
+    "hardware_64_byte_cache_lines": false,
+    "execution_mode": "complete_assigned_run",
+    "verification_passed": false
+  },
+  "verification_passed": false
+}
