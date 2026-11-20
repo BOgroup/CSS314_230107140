@@ -1,0 +1,118 @@
+{
+  "student_id": "230107140",
+  "github_username": "BOgroup",
+  "gpu_uuid": "GPU-394795dc-4bf3-fd8c-2662-cd047cc1d15c",
+  "gpu_name": "Tesla T4",
+  "compute_capability": [
+    7,
+    5
+  ],
+  "INSTANCE_SEED": 14778437557156476747,
+  "mpi_ranks": 4,
+  "cartesian_dims": [
+    2,
+    2
+  ],
+  "cartesian_periods": [
+    false,
+    false
+  ],
+  "global_shape": [
+    512,
+    512
+  ],
+  "local_padded_shape": [
+    258,
+    258
+  ],
+  "steps": 400,
+  "dx": 0.001949317738791423,
+  "dy": 0.001949317738791423,
+  "lambda_damp": 0.15,
+  "kappa_max": 0.23999929287412453,
+  "dt": 3.1665423687392743e-06,
+  "dt_max": 3.958177960924093e-06,
+  "source_integral_initial": 0.0,
+  "ptx_audit": {
+    "st_shared_f64": 9,
+    "ld_shared_f64": 5,
+    "bar_sync": 1,
+    "st_shared_any": 9,
+    "ld_shared_any": 5,
+    "ptx_sha256": "fa4ce50368dcbb3187c3b7c58386724b9f3170355bbec84e860f78b954bb855b",
+    "ptx_bytes": 32076,
+    "ptx_audit_passed": true
+  },
+  "ptx_audit_passed": true,
+  "serialized_ms": 1889.909232,
+  "overlapped_ms": 1323.2469890000002,
+  "speedup": 1.4282361854669594,
+  "parity_max_diff": 0.0,
+  "parity_passed": true,
+  "energy_monotone": true,
+  "energy_trace_serialized": [
+    {
+      "step": 0,
+      "energy": 0.09515522614926405,
+      "l2_update": 0.0
+    },
+    {
+      "step": 100,
+      "energy": 0.09514298821082996,
+      "l2_update": 1.527250694869789e-05
+    },
+    {
+      "step": 200,
+      "energy": 0.09513458311493106,
+      "l2_update": 1.5038838130262454e-05
+    },
+    {
+      "step": 300,
+      "energy": 0.09512663551247631,
+      "l2_update": 1.4813454239600407e-05
+    },
+    {
+      "step": 400,
+      "energy": 0.09511876300398325,
+      "l2_update": 1.4594113290586959e-05
+    }
+  ],
+  "energy_trace_overlapped": [
+    {
+      "step": 0,
+      "energy": 0.09515522614926405,
+      "l2_update": 0.0
+    },
+    {
+      "step": 100,
+      "energy": 0.09514298821082996,
+      "l2_update": 1.527250694869789e-05
+    },
+    {
+      "step": 200,
+      "energy": 0.09513458311493106,
+      "l2_update": 1.5038838130262454e-05
+    },
+    {
+      "step": 300,
+      "energy": 0.09512663551247631,
+      "l2_update": 1.4813454239600407e-05
+    },
+    {
+      "step": 400,
+      "energy": 0.09511876300398325,
+      "l2_update": 1.4594113290586959e-05
+    }
+  ],
+  "cuda_events_ms_serialized": {
+    "pack_d2h_ms": 0.22198399901390076,
+    "deep_interior_ms": 0.022495999932289124,
+    "h2d_unpack_and_rings_ms": 1.4623359441757202
+  },
+  "cuda_events_ms_overlapped": {
+    "pack_d2h_ms": 0.09382399916648865,
+    "deep_interior_ms": 2.199359893798828,
+    "h2d_unpack_and_rings_ms": 1.2065279483795166
+  },
+  "completed_on_real_gpu": true
+}
